@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+}
+
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /*Neutral*/
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  overflow: hidden;
+  overflow-y: auto;
+  position: relative;
+  color: var(--Very-Dark-Blue);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 90rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  position: absolute;
+  bottom: 5px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  color: var(--Very-Dark-Blue);
+  font-weight: 400;
+  font-size: 1.9rem;
+}
+.sub-title {
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--Very-Dark-Blue);
+  margin: 0.5rem 0;
+}
+.des {
+  color: var(--Grayish-Blue);
+  max-width: 32rem;
+  width: 100%;
+  text-align: center;
+}
+.wrap-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.box {
+  max-width: 25rem;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 5px;
+  border-top: 5px solid var(--Cyan);
+  height: 15rem;
+  box-shadow: 0 2px 1px rgb(15, 15, 15, 0.7);
+  position: relative;
+}
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.box img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.box-des {
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+  max-width: 16.5rem;
+  width: 100%;
+}
+.mid-box {
+  max-width: 25rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.red {
+  border-color: var(--Red);
+}
+.wrap-box .box:nth-child(2) {
+  border-color: var(--Orange);
+}
+.wrap-box .box:nth-child(3) {
+  border-color: var(--Blue);
+}
+@media (max-width: 1200px) {
+  .wrap-box {
+    flex-wrap: wrap;
+  }
+  .mid-box {
+    display: flex;
+    flex-direction: row;
+    max-width: 50rem;
+  }
+}
+@media (max-width: 800px) {
+  .mid-box {
+    flex-direction: column;
+    max-width: 25rem;
+  }
+  main {
+    margin: 2rem 1rem;
+  }
+  header {
+    text-align: center;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .sub-title {
+    font-size: 1.6rem;
+  }
+}
